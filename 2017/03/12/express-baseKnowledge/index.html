@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Na Yang">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="express-baseKnowledge"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-light.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">express-baseKnowledge</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://yangna0420.github.io.git">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/yangnaupc@126.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Na Yang</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-03-12</span>
+            <span class="time">22:51:27</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/express-all-next/">#express all next</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>​    <strong>Express</strong> 是一个基于 Node.js 平台的极简、灵活的 web 应用开发框架，它提供一系列强大的特性，帮助你创建各种 Web 和移动设备应用。丰富的 HTTP 快捷方法和任意排列组合的 Connect 中间件，让你创建健壮、友好的 API 变得既快速又简单。<strong>Express</strong> 不对 Node.js 已有的特性进行二次抽象，我们只是在它之上扩展了 Web 应用所需的基本功能。<br><a id="more"></a></p>
+<h3 id="press基础知识学习笔记"><a href="#press基础知识学习笔记" class="headerlink" title="press基础知识学习笔记"></a>press基础知识学习笔记</h3><p><img src="E:\杨娜博客\blog\my_img\express.jpg" alt="express"></p>
+<h3 id="express框架"><a href="#express框架" class="headerlink" title="express框架"></a>express框架</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">产生的原因:</div><div class="line">	1.http模块在处理路由这块比较鸡肋</div><div class="line">	2.http模块在处理静态资源时比较麻烦</div><div class="line">	3.http在获取浏览器的提交过来的参数时很麻烦</div><div class="line">	4.express能解决url中有中文时,express能自动解码</div><div class="line">		</div><div class="line">基本概念:</div><div class="line">express是nodejs发送网络请求的第三方框架,是NodeJS中一个优秀的 web 解决方案</div><div class="line"></div><div class="line">地址:</div><div class="line">https://www.npmjs.com/package/express</div><div class="line">https://github.com/expressjs/express</div><div class="line"></div><div class="line">安装:</div><div class="line">	npm i/install express --save</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="express使用步骤"><a href="#express使用步骤" class="headerlink" title="express使用步骤"></a>express使用步骤</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">利用express开启web服务器的步骤：</div><div class="line">1、在当前项目中使用 npm i/install express --save</div><div class="line">2、导入express包</div><div class="line">	创建一个 Express 应用。express() 是一个由 express 模块导出的入口（top-level）函数。</div><div class="line">  	var express = require(&apos;express&apos;);</div><div class="line">3、利用express对象创建一个application对象 app</div><div class="line">	var app = express();</div><div class="line">4、在app对象上就有一系列方法（get,post）还可以可以分别设置请求路由</div><div class="line">5、利用app.listen()监听端口</div><div class="line"></div><div class="line">GET方法获取参数：</div><div class="line">	直接从 req.query中就可以获取,非常简单</div><div class="line">	</div><div class="line">POST方法获取参数:</div><div class="line">	使用一个第三方包 body-parser</div></pre></td></tr></table></figure>
+<h2 id="express的路由"><a href="#express的路由" class="headerlink" title="express的路由"></a>express的路由</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">/man/xz</div><div class="line">/man/ld</div><div class="line"></div><div class="line">/woman/qz</div><div class="line">/woman/sw</div><div class="line"></div><div class="line">如何使用:</div><div class="line">	1.将某一类路由规则放入到一个js文件中,写好相应的代码,并且暴露出去</div><div class="line">		const express = require(&apos;express&apos;);</div><div class="line">		</div><div class="line">		let route = express.Router(); //创建一个路由</div><div class="line">		路由的处理...</div><div class="line">		</div><div class="line">		module.exports = route; //将创建的路由对象暴露出去</div><div class="line">	</div><div class="line">	2.在启动服务器的js文件中,导入对应的路由,并且调用app.use方法使用即可</div><div class="line">		const route = require(&apos;路由的路径&apos;);</div><div class="line">		</div><div class="line">		app.use(&apos;路由规则&apos;,route); //哪些路由规则适用于该路由</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">开发注意事项:</div><div class="line">	设置路由一定要写在入口文件的代码后面一些,最好写在app.listen(xx) 的前一行即可;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="express之next方法"><a href="#express之next方法" class="headerlink" title="express之next方法"></a>express之next方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">使用方式:(有两种)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">	第一种:连写方式,用得比较少</div><div class="line">		app.get(&apos;/&apos;,(req,res,next)=&gt;&#123;</div><div class="line">		 	res.write(&apos;1.0 &apos;);</div><div class="line">		 	next();</div><div class="line">	    &#125;,(req,res,next)=&gt;&#123;</div><div class="line">		 	res.write(&apos;2.0 &apos;);</div><div class="line">		 	next();</div><div class="line">	    &#125;,(req,res)=&gt;&#123;</div><div class="line">		 	res.end(&apos;3.0 end&apos;);</div><div class="line">	    &#125;);</div><div class="line">	    </div><div class="line">	第二种:分开写,用得比较多</div><div class="line">		app.get(&apos;/&apos;,(req,res,next)=&gt;&#123;</div><div class="line"></div><div class="line">			res.write(&apos;1.0&apos;);</div><div class="line">			</div><div class="line">			//触发下一个同样的路由的回调函数</div><div class="line">			next(&apos;route&apos;);</div><div class="line">		&#125;);</div><div class="line">		</div><div class="line">		app.get(&apos;/&apos;,(req,res)=&gt;&#123;</div><div class="line">		</div><div class="line">			res.end(&apos;2.0&apos;);</div><div class="line">		&#125;);</div><div class="line"></div><div class="line">调用的过程分析:</div><div class="line">	当浏览器请求 http://127.0.0.1:8888/</div><div class="line">	触发第一个回调函数，当在第一个回调函数中手工执行next()的时候</div><div class="line">	就会触发第二个回调函数，一直下去直到最后一个回调函数被执行，那么最后</div><div class="line">	这个回调函数可以不用写next参数</div><div class="line">	</div><div class="line">使用注意:</div><div class="line">	触发下一个同样的路由的回调函数,路由必须一致</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="express之通配符方法-all-与next方法联合起来做权限验证"><a href="#express之通配符方法-all-与next方法联合起来做权限验证" class="headerlink" title="express之通配符方法(all)与next方法联合起来做权限验证"></a>express之通配符方法(all)与next方法联合起来做权限验证</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">使用方式:</div><div class="line">	app.all(&apos;路由&apos;,(req,res,next)=&gt;&#123;</div><div class="line"></div><div class="line">		if(登录过)&#123;</div><div class="line">			next();  //继续往下执行真正的请求</div><div class="line">		&#125;else&#123;</div><div class="line">			res.end(&quot;请登录&quot;); //提示用户登录</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line"></div><div class="line">注意点:</div><div class="line">	app.all(xxx); 一定要在所有路由的最前面</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="express静态资源处理"><a href="#express静态资源处理" class="headerlink" title="express静态资源处理"></a>express静态资源处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">使用方式:</div><div class="line">	app.use(express.static(&apos;静态资源路径&apos;)); </div><div class="line"></div><div class="line">访问时的注意点:</div><div class="line">	如果浏览器要访问statics下面的site.css</div><div class="line">	url应该是 http://127.0.0.1:8888/site.css </div><div class="line">	如果是http://127.0.0.1:8888/statics/site.css 反而报错</div><div class="line">	如果是statics下面的字母中的静态资源，则一定要在url中加上子目录</div><div class="line">	</div><div class="line">注意点:</div><div class="line">	设置在路由或是app.use(路由),之前</div><div class="line">	要在两个地方写,一个是html里面,还有一个地方是入口的js文件</div></pre></td></tr></table></figure>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
