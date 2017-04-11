@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="Na Yang">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Hexo"/>
+  <meta property="og:title" content="json序列化及反序列化"/>
   <meta property="og:description" content="" />
   <meta property="og:site_name" content="Hexo"/>
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -43,7 +43,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Untitled Post</p>
+          <p class="title">json序列化及反序列化</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -100,16 +100,33 @@
           
           <!-- Date -->
           <span class="date-time info">On
-            <span class="date">2017-03-11</span>
+            <span class="date">2015-10-11</span>
             <span class="time">20:54:59</span>
           </span>
           
         </div>
         <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/json-序列化-反序列化/">#json 序列化 反序列化</a>
+
+
+          </div>
+        
         <!-- Post Main Content -->
         <div class="post-content">
-          
+          <pre><code>当两个进程在进行远程通信时，彼此可以发送各种类型的数据。无论是何种类型的数据，都会以二进制序列的形式在网络上传送。发送方需要把这个Java对象转换为字节序列，才能在网络上传送；接收方则需要把字节序列再恢复为Java对象。
+</code></pre><a id="more"></a>
+<p>###JSON.stringify</p>
+<p>作用：将一个 JavaScript 对象转为标准的 json 格式字符串</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> user = &#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'Jack'</span>,</div><div class="line">  <span class="attr">age</span>: <span class="number">18</span>,</div><div class="line">  <span class="attr">gender</span>: <span class="string">'男'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">JSON</span>.stringify(user) <span class="comment">// =&gt; &#123;"name":"Jack","age":18,"gender":"男"&#125;</span></div></pre></td></tr></table></figure>
+<h3 id="JSON-parse"><a href="#JSON-parse" class="headerlink" title="JSON.parse"></a>JSON.parse</h3><p>作用：将一个标准的 json 格式字符串转为一个 JavaScript 对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> userStr = <span class="string">"&#123;"</span>name<span class="string">":"</span>Jack<span class="string">","</span>age<span class="string">":18,"</span>gender<span class="string">":"</span>男<span class="string">"&#125;"</span></div><div class="line"><span class="built_in">JSON</span>.parse(userStr)</div><div class="line"><span class="comment">// =&gt;</span></div><div class="line">&#123;</div><div class="line">  <span class="attr">name</span>: <span class="string">'Jack'</span>,</div><div class="line">  <span class="attr">age</span>: <span class="number">18</span>,</div><div class="line">  <span class="attr">gender</span>: <span class="string">'男'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>将对象转为 json 格式字符串叫做序列化，<br>将 json 格式字符串转为对象叫做反序列化。</p>
+<pre><code>把Java对象转换为字节序列的过程称为对象的序列化。把字节序列恢复为Java对象的过程称为对象的反序列化。对象的序列化主要有两种用途：1） 把对象的字节序列永久地保存到硬盘上，通常存放在一个文件中；2） 在网络上传送对象的字节序列。
+</code></pre>
         </div>
       </div>
     </div>

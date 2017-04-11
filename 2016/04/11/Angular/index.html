@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Na Yang">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="AngularJS"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-light.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">AngularJS</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://yangna0420.github.io.git">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/yangnaupc@126.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Na Yang</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2016-04-11</span>
+            <span class="time">20:54:59</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/angular-dataBind-MV-inject/">#angular dataBind MV* inject</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>​    什么是 AngularJS？ 一款非常优秀的前端高级JavaScript 框架， 2009 年起先由 Miško Hevery 和 Adam Abron 开发，后被 Google 收购，用于其多款产品， 有一个全职的开发团队继续开发和维护这个库，可以轻松构建 SPA 应用程序， 通过 指令 扩展了 HTML，通过表达式 绑定数据到 HTML， angular 就是一个高级的模板引擎，最大程度上解放了 DOM 操作， 构建更加动感的 HTML 应用程序。</p>
+<a id="more"></a>
+<p>AngularJS是为了克服HTML在构建应用上的不足而设计的。<br>AngularJS有着诸多特性，最为核心的是：</p>
+<ul>
+<li>MVC</li>
+<li>模块化</li>
+<li>自动化双向数据绑定</li>
+<li>语义化标签、依赖注入等等</li>
+</ul>
+<h3 id="为什么使用-Angular-演示-Demo-中的-compare"><a href="#为什么使用-Angular-演示-Demo-中的-compare" class="headerlink" title="为什么使用 Angular(演示 Demo 中的 compare)"></a>为什么使用 Angular(演示 Demo 中的 compare)</h3><p>以前我们是这样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>传统页面操作数据操作方式<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"txt_value"</span> <span class="attr">type</span>=<span class="string">"number"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"btn_add"</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"增加"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    (function(window, document) &#123;</div><div class="line">      var txt = document.querySelector('#txt_value');</div><div class="line">      var btn = document.querySelector('#btn_add');</div><div class="line">      btn.addEventListener('click', function(e) &#123;</div><div class="line">        var now = txt.value - 0;</div><div class="line">        now = now + 1;</div><div class="line">        txt.value = now;</div><div class="line">      &#125;);</div><div class="line">    &#125;)(window, document);</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>以后将会是这样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>使用AngularJS实现自增功能<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">ng-model</span>=<span class="string">"value"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">ng-click</span>=<span class="string">"value=value+1"</span> <span class="attr">value</span>=<span class="string">"增加"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"../bower_components/angular/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>更少的代码，实现更强劲的功能，当然不仅仅是这些，这些只是皮毛</li>
+<li>背后带来的价值才是巨大的</li>
+<li>带领前端进入了 MV* 的时代</li>
+<li>又是一场革命，Angular 引领了前端工业革命<ul>
+<li>从 Angular 2009 年之后，前端市场越来越火爆了</li>
+</ul>
+</li>
+</ul>
+<h3 id="AngularJS-优缺点"><a href="#AngularJS-优缺点" class="headerlink" title="AngularJS 优缺点"></a>AngularJS 优缺点</h3><p>优点：</p>
+<ol>
+<li>AngularJS模板功能强大丰富，自带了极其丰富的angular指令。</li>
+<li>AngularJS是完全可扩展的，与其他库的兼容效果很好，每一个功能可以修改或更换，以满足开发者独特的开发流程和功能的需求。</li>
+<li>AngularJS是一个比较完善的前端MVC框架，包含服务，模板，数据双向绑定，模块化，路由，过滤器，依赖注入等所有功能；</li>
+<li>AngularJS是互联网巨人谷歌开发，这也意味着他有一个坚实的基础和社区支持。</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li><p>AngularJS强约束导致学习成本较高，对前端不友好。但遵守 AngularJS 的约定时，生产力会很高，对 后台服务器开发程序员友好。</p>
+</li>
+<li><p>AngularJS不利于SEO，因为所有内容都是动态获取并渲染生成的，搜索引擎没法爬取。</p>
+</li>
+<li><p>AngularJS作为 MVVM 框架，因为实现了数据的双向绑定，对于大数组、复杂对象会存在性能问题。</p>
+<h3 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h3><ul>
+<li>AngularJS 最大程度上减少了页面上的 DOM 操作</li>
+<li>让开发人员更专注于业务操作</li>
+<li>通过简洁的指令结合页面结构与逻辑数据</li>
+<li>通过自定义指令实现组件化编程</li>
+<li>代码结构更合理</li>
+<li>维护成本更低</li>
+<li>AngularJS 解放了传统 JavaScript 中频繁的 DOM 操作</li>
+</ul>
+</li>
+</ol>
+<h3 id="AngularJS-使用场景"><a href="#AngularJS-使用场景" class="headerlink" title="AngularJS 使用场景"></a>AngularJS 使用场景</h3><ul>
+<li>单页面应用程序</li>
+<li>复杂的后台管理系统<ul>
+<li>CRUD（增加 Create、查询 Retrieve、更新 Update、删除 Delete）</li>
+<li>繁杂的 DOM 操作处理的页面</li>
+</ul>
+</li>
+</ul>
+<p>Angular 是一个类 MVC 类结构的 JavaScript 框架，建议构建 CRUD 类型应用的时候使用它，<br>而对于那些图形编辑、游戏开发等应用，使用 Angular 就不如调用其它 JavaScript 类库方便，<br>如 jQuery。</p>
+<h3 id="学习资源推荐"><a href="#学习资源推荐" class="headerlink" title="学习资源推荐"></a>学习资源推荐</h3><ul>
+<li>菜鸟教程：<a href="http://www.runoob.com/angularjs/angularjs-tutorial.html" target="_blank" rel="external">http://www.runoob.com/angularjs/angularjs-tutorial.html</a></li>
+<li>AngularJS 中文社区：<a href="http://angularjs.cn/" target="_blank" rel="external">http://angularjs.cn/</a></li>
+<li>官方文档：<a href="https://docs.angularjs.org/api" target="_blank" rel="external">https://docs.angularjs.org/api</a></li>
+<li>AngularJS 权威教程<ul>
+<li>API 解释的更详细</li>
+</ul>
+</li>
+<li>AngularJS 深度剖析与最佳实践<ul>
+<li>更注重实践</li>
+</ul>
+</li>
+<li><a href="http://www.ituring.com.cn/minibook/303" target="_blank" rel="external">AngularJS入门教程</a></li>
+<li><a href="http://blog.jobbole.com/46779/" target="_blank" rel="external">七步从Angular.JS菜鸟到专家</a></li>
+</ul>
+<hr>
+<h2 id="AngularJS：起步"><a href="#AngularJS：起步" class="headerlink" title="AngularJS：起步"></a>AngularJS：起步</h2><ul>
+<li>搜索是什么</li>
+<li>看官网能干什么</li>
+<li>探索怎么用</li>
+</ul>
+<h3 id="关于版本"><a href="#关于版本" class="headerlink" title="关于版本"></a>关于版本</h3><ul>
+<li><a href="https://angularjs.org/" target="_blank" rel="external">Angular 1</a></li>
+<li><a href="https://github.com/angular/angular.js" target="_blank" rel="external">Angular 1 - Github</a></li>
+<li><a href="https://angular.io/" target="_blank" rel="external">Angular 2</a></li>
+<li>版本 1.0 是在 2012 年发布的。</li>
+<li>AngularJS在1.2之后的版本不再支持Internet Explorer 6和7.</li>
+<li>在1.3之后的版本停止对Internet Explorer 8的支持.</li>
+<li>ng2 已经在2016年8月份正式发布了，现在公司里面用的不太多</li>
+<li>ng4 将要在 2017年3月份正式发布</li>
+<li>ng1 对于一些老项目还非常的多，ng1 已经在逐渐的走向没落了<ul>
+<li>ng 是第一个真正意义上把前端从刀耕火种的年代带到了工业时代</li>
+<li>目前市面上基本上会使用 Vue 或 React 的开发人员都多多少少会一点 Angular</li>
+<li>思想经典</li>
+</ul>
+</li>
+</ul>
+<p>之所以学习 Angular 1.x.x ，最经典，主要以体会前端框架思想为主，<br>市面上大部分会 Vue、React 的都会 Angular，而且很多书本中都会拿新框架和 Angular 做对比。</p>
+<p>新东西虽然层出不穷，但是这些框架的开发思路、流程大抵都是相通的。</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><ul>
+<li>github<ul>
+<li><code>https://github.com/angular/angular.js/releases</code></li>
+</ul>
+</li>
+<li>CDN<ul>
+<li><code>https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js</code></li>
+</ul>
+</li>
+<li>bower<ul>
+<li><code>bower install angular#1.6.1</code></li>
+</ul>
+</li>
+<li>npm<ul>
+<li><code>npm install angular@1.6.1</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>ng - HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span> <span class="attr">ng-init</span>=<span class="string">"name='World'"</span>&gt;</span></div><div class="line">  Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"name"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">hr</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello &#123;&#123;name&#125;&#125;!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h3><ul>
+<li>当网页加载完毕，AngularJS 自动开始执行</li>
+<li>HTML 页面中 <code>ng-xxx</code> 的属性称之为指令（Directive）</li>
+<li><code>ng-app</code> 指令告诉 AngularJS ，<code>&lt;body&gt;</code> 元素是 AngularJS 应用程序管理的边界</li>
+<li><code>ng-init</code> 指令初始化 AngularJS 应用程序变量</li>
+<li><code>ng-model</code> 指令把文本框的 <code>value</code> 值绑定到变量 <code>name</code> 上</li>
+<li><code></code> 表达式就是把应用程序变量 <code>name</code> 绑定到某个元素的 <code>innerHTML</code></li>
+</ul>
+<p>解析过程如下图：</p>
+<p><img src="./img/hello-world解析.png" alt="执行流程"></p>
+<h3 id="AngularJS-表达式"><a href="#AngularJS-表达式" class="headerlink" title="AngularJS 表达式"></a>AngularJS 表达式</h3><ul>
+<li>AngularJS 表达式写在双大括号内：<code></code></li>
+<li>AngularJS 表达式把数据绑定到 HTML，与 <code>ng-bind</code> 指令基本一致</li>
+<li>AngularJS 将在表达式书写的位置”输出”数据<ul>
+<li>数字</li>
+<li>字符串</li>
+<li>对象</li>
+<li>数组</li>
+</ul>
+</li>
+<li>AngularJS 表达式 很像 JavaScript 表达式：它们可以包含字符串、操作符和变量<ul>
+<li>与 JavaScript 表达式不同，AngularJS 表达式可以写在 HTML 中</li>
+<li>与 JavaScript 表达式不同，AngularJS 表达式不支持条件判断，循环及异常</li>
+<li>与 JavaScript 表达式不同，AngularJS 表达式支持过滤器</li>
+</ul>
+</li>
+</ul>
+<h3 id="AngularJS-指令"><a href="#AngularJS-指令" class="headerlink" title="AngularJS 指令"></a>AngularJS 指令</h3><p>AngularJS 指令是以 <code>ng-</code> 作为前缀的 HTML 属性，<br>AngularJS 通过内置的指令来为应用添加功能，<br>AngularJS 同时允许你自定义指令，从而构建更加超动感的 HTML。</p>
+<p>HTML5 允许扩展的（自制的）属性，以 <code>data-</code> 开头。<br>AngularJS 属性以 ng- 开头，但是也可以使用 <code>data-ng-</code> 来让网页对 HTML5 有效。</p>
+<ul>
+<li>ng-app<ul>
+<li>入口标识</li>
+</ul>
+</li>
+<li>ng-init<ul>
+<li>可以在模型仓库中初始化数据</li>
+</ul>
+</li>
+<li>ng-model<ul>
+<li>可以和表单控件的 value 进行双向绑定</li>
+</ul>
+</li>
+<li>ng-bind<ul>
+<li>和表达式一样，可以解决表达式闪烁的问题</li>
+</ul>
+</li>
+<li>ng-click</li>
+<li>ng-repeat</li>
+</ul>
+<hr>
+<ul>
+<li><p>ngClass</p>
+<ul>
+<li>可以根据模型数据成员的属性值，动态的添加或者删除样式类</li>
+<li>ng-class=”{样式类名: bool值[,样式类名: bool值]}”</li>
+</ul>
+</li>
+<li><p>ngSubmit</p>
+<ul>
+<li>表单的提交事件</li>
+<li>一种点击 type 为 submit 的按钮</li>
+<li>一种是在文本类型的 input 中敲回车也会默认触发表单的 submit 事件</li>
+</ul>
+</li>
+<li><p>ng 控制器</p>
+<ul>
+<li>视图模型</li>
+<li>作用域</li>
+</ul>
+</li>
+<li><p>ng 模块</p>
+</li>
+</ul>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>创建模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'模块名称'</span>, [])</div></pre></td></tr></table></figure>
+<p>启动模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 指令方式启动</span></div><div class="line">ng-app=<span class="string">"模块名"</span></div><div class="line"></div><div class="line"><span class="comment">// 代码方式启动</span></div><div class="line">angular.bootstrap(<span class="built_in">document</span>, [<span class="string">'模块名'</span>])</div></pre></td></tr></table></figure>
+<p>获取模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'模块名'</span>)</div></pre></td></tr></table></figure>
+<p>启动多个模块（就是将多个模块组织到一起，然后作用到某个具体的DOM节点上）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">angular.bootstrap(<span class="built_in">document</span>, [<span class="string">'模块名'</span>[,<span class="string">'模块名'</span>]])</div></pre></td></tr></table></figure>
+<p>多模块启动最佳实践：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'app1'</span>, []).controller(<span class="string">'AController'</span>)</div><div class="line">angular.module(<span class="string">'app2'</span>, []).controller(<span class="string">'BController'</span>)</div><div class="line">angular.module(<span class="string">'app3'</span>, []).controller(<span class="string">'CController'</span>)</div><div class="line"></div><div class="line">angular.module(<span class="string">'mainApp'</span>, [<span class="string">'app1'</span>, <span class="string">'app2'</span>, <span class="string">'app3'</span>])</div><div class="line"><span class="comment">// 最后在 HTML 中通过 ng-app 加载 mainApp 就可以使用 app1、app2、app3 中的所有控制器成员了</span></div><div class="line"><span class="comment">// 代码如下</span></div></pre></td></tr></table></figure>
+<p>html:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"mainApp"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"AController"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"BController"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-controller</span>=<span class="string">"CController"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如何划分模块：</p>
+<ul>
+<li>控制器按照页面具体的业务功能来划分</li>
+<li>模块就是将处理相关联业务的控制器组织到一起</li>
+<li>这样无论是从代码结构组织上还是可维护性上都是一种比较好的实践方式</li>
+</ul>
+<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><p>第一种方式(在新版本中已被废弃)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DemoController</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line">  <span class="comment">// some code here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二种方式(代码混淆压缩之后有问题)：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'app'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoController'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// some code here</span></div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<p>第三方方式（推荐的方式）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'app'</span>, [])</div><div class="line">  .controller(<span class="string">'DemoController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// some code here</span></div><div class="line">  &#125;])</div></pre></td></tr></table></figure>
+<h3 id="window-scope"><a href="#window-scope" class="headerlink" title="window.$scope"></a>window.$scope</h3><h3 id="AngularJS-Batarang"><a href="#AngularJS-Batarang" class="headerlink" title="AngularJS Batarang"></a>AngularJS Batarang</h3><p>第一：安装一个 Chrome 插件：<a href="https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?utm_source=chrome-ntp-icon" target="_blank" rel="external">AngularJS Batarang</a></p>
+<p>第二：以 http 服务的形式打开你查看调试的页面</p>
+<p>第三：打开控制台，找到 AngularJS 选项卡，切换进去</p>
+<p>第四：选择 Enable 启动</p>
+<p>第五：进入 Scopes 选项卡查看数据模型成员数据的动态变化</p>
+<p>注意：如果在使用的过程打开调试看不到 Scopes 记得通过在左上角的刷新按钮右键点击 <code>清空缓存并硬性重新加载</code> 即可。</p>
+<h2 id="Angular-过滤器"><a href="#Angular-过滤器" class="headerlink" title="Angular 过滤器"></a>Angular 过滤器</h2><h3 id="内置过滤器"><a href="#内置过滤器" class="headerlink" title="内置过滤器"></a>内置过滤器</h3><table>
+<thead>
+<tr>
+<th>过滤器名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td>货币</td>
+</tr>
+<tr>
+<td>date</td>
+<td>日期</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>过滤器中的过滤器</td>
+</tr>
+<tr>
+<td>json</td>
+<td>json对象格式化</td>
+</tr>
+<tr>
+<td>limitTo</td>
+<td>限制</td>
+</tr>
+<tr>
+<td>lowercase</td>
+<td>转小写</td>
+</tr>
+<tr>
+<td>number</td>
+<td>数字</td>
+</tr>
+<tr>
+<td>orderBy</td>
+<td>排序</td>
+</tr>
+<tr>
+<td>uppercase</td>
+<td>转大写</td>
+</tr>
+</tbody>
+</table>
+<h3 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">angular.module(<span class="string">'模块'</span>)</div><div class="line">  .filter(<span class="string">'过滤器名称'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">input, a, b</span>) </span>&#123;</div><div class="line">      <span class="comment">// input 就是使用过滤器的表达式计算结果</span></div><div class="line">      <span class="comment">// 如果想要支持参数，则在方法中依次接收即可</span></div><div class="line">      <span class="comment">// 在 HTML 中使用的时候，通过 :参数 来给过滤器传递参数</span></div><div class="line">    &#125;</div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h2 id="AngularJS-Phonecat-案例预览"><a href="#AngularJS-Phonecat-案例预览" class="headerlink" title="AngularJS Phonecat 案例预览"></a>AngularJS Phonecat 案例预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 下载源码</span></div><div class="line">git <span class="built_in">clone</span> https://github.com/angular/angular-phonecat.git</div><div class="line"></div><div class="line"><span class="comment"># 进入 angular-phonecat 目录</span></div><div class="line"><span class="built_in">cd</span> angular-phonecat</div><div class="line"></div><div class="line"><span class="comment"># 安装依赖</span></div><div class="line">npm install</div><div class="line"></div><div class="line"><span class="comment"># 启动</span></div><div class="line">npm start</div><div class="line"></div><div class="line"><span class="comment"># 在浏览器预览</span></div><div class="line">http://localhost:8000</div></pre></td></tr></table></figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

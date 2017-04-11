@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Na Yang">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="初识webpack"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-light.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">初识webpack</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://yangna0420.github.io.git">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/yangnaupc@126.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Na Yang</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2016-06-18</span>
+            <span class="time">20:54:59</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/webpack-模块化管理-打包工具/">#webpack 模块化管理 打包工具</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>​    webpack就是一个资源打包工具,它可以将css,js,image,.vue等等文件当做一个模块来进行打包处理,最终将这些资源输出到一个统一的.js文件中,将来在系统中只需要请求这个打包好的.js文件即可完成所有的功能！</p>
+<a id="more"></a>
+<p>question:  why select webpack?</p>
+<pre><code>1.vuejs官方脚手架工具中就使用了webpack模版
+2.对所有的资源会做压缩等优化
+3.它在开发过程中提供了一整套完整的功能,能够使我们开发过程变得高效
+</code></pre><h2 id="webpack的使用"><a href="#webpack的使用" class="headerlink" title="webpack的使用"></a>webpack的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">使用途径:</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">官方文档</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">	1.x版本,项目中使用的是1.13.3这个版本</div><div class="line">		http://webpack.github.io/docs/</div><div class="line">		</div><div class="line">	2.x版本</div><div class="line">		https://webpack.js.org/</div><div class="line">		</div><div class="line">	https://github.com/webpack/webpack</div><div class="line">	</div><div class="line">学习文章:</div><div class="line">	http://www.w2bc.com/Article/50764</div><div class="line">	http://www.jianshu.com/p/42e11515c10f</div></pre></td></tr></table></figure>
+<p>​        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">使用步骤:</div><div class="line">	1.安装webpack这个全局包 npm install webpack -g</div><div class="line">	2.在cmd控制面板中调用webpack的指令给定两个参数 要打包的文件 要输出的文件路径 例如:webpack main.js build.js</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="webpack的基本概念"><a href="#webpack的基本概念" class="headerlink" title="webpack的基本概念"></a>webpack的基本概念</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">什么是webpack?</div><div class="line">	Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</div><div class="line">	</div><div class="line">Github地址:</div><div class="line">	https://github.com/webpack/webpack</div><div class="line">	</div><div class="line">官网:</div><div class="line">	https://webpack.js.org/</div><div class="line">	</div><div class="line">能做什么?</div><div class="line">	打包及优化我们的代码,还能做到按需加载</div><div class="line">	</div><div class="line">相比于其它构建工具/打包工具,比如gulp好在哪里? </div><div class="line">	http://webpackdoc.com/what-is-webpack.html</div><div class="line">	</div><div class="line">	1.代码拆分</div><div class="line">	2.Loader</div><div class="line">	3.智能解析</div><div class="line">	4.插件系统</div><div class="line">	5.快速运行</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="webpack的安装"><a href="#webpack的安装" class="headerlink" title="webpack的安装"></a>webpack的安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install webpack -g</div></pre></td></tr></table></figure>
+<hr>
+<p>##webpack中的Loader</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">作用:</div><div class="line">	Webpack 本身只能处理 JavaScript 模块，如果要处理其他类型的文件，就需要使用 loader 进行转换。</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="webpack中的插件"><a href="#webpack中的插件" class="headerlink" title="webpack中的插件"></a>webpack中的插件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">作用:</div><div class="line">	插件可以完成更多 loader 不能完成的功能。</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="webpack中webpack-dev-server"><a href="#webpack中webpack-dev-server" class="headerlink" title="webpack中webpack-dev-server"></a>webpack中webpack-dev-server</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">作用:</div><div class="line">	可以简化我们的webpack打包的操作,当我们的源代码更改后</div><div class="line">	会自动打包,并且刷新页面,有点类似于nodemon</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="npm-amp-cmd控制面板-amp-cmd的指令"><a href="#npm-amp-cmd控制面板-amp-cmd的指令" class="headerlink" title="npm? &amp; cmd控制面板 &amp;cmd的指令"></a>npm? &amp; cmd控制面板 &amp;cmd的指令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">npm:</div><div class="line">	1.npmjs.com存储了很多nodejs第三方的功能包</div><div class="line">	2.利用npm这个工具,可以将nodejs第三方包通过相关指令进行安装,例如 npm install webpack -g</div><div class="line">	3.只要安装好了node.exe这个软件,就自动安装好了npm这个包</div><div class="line">	</div><div class="line">如何查看npm</div><div class="line">	在终端中输入 npm -v</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="webpack案例"><a href="#webpack案例" class="headerlink" title="webpack案例"></a>webpack案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">意义:</div><div class="line">	明白模块化开发的思想(需要谁就导入谁)</div><div class="line"></div><div class="line">写法:</div><div class="line">	var 模块 = require(&apos;xxx/xxx.js&apos;);</div><div class="line">	路径可以是相对路径也可以是绝对路径</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">注意:</div><div class="line">	我们通过require导入的模块,其实就是对应js文件中通过module.exports导出的东西</div><div class="line">	</div><div class="line">步骤:</div><div class="line">	1.先写好js代码</div><div class="line">	2.利用webpack打包成浏览器可以解析的js代码,主要对main.js进行打包,这样main.js依赖的模块也会一并打包</div><div class="line">	3.在网页中导入上一步中打包并且生成好的build.js,在浏览器中运行</div><div class="line"></div><div class="line">webpack打包指令:</div><div class="line">	webpack 要打包的文件 输出的文件</div></pre></td></tr></table></figure>
+<hr>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

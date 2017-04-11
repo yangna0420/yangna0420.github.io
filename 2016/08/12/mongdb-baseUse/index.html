@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Na Yang">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="MongoDB-BaseUsage"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-light.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">MongoDB-BaseUsage</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://yangna0420.github.io.git">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/yangnaupc@126.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Na Yang</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2016-08-12</span>
+            <span class="time">20:54:59</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/mongodb-dataStroage/">#mongodb dataStroage</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+<a id="more"></a>
+<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><h3 id="数据库概念"><a href="#数据库概念" class="headerlink" title="数据库概念"></a>数据库概念</h3><blockquote>
+<p>数据库：数据存储的仓库</p>
+</blockquote>
+<p>数据库就是为我们方便的管理数据的一个平台，例如对数据的存储、修改、查询等都非常的方便。</p>
+<h3 id="数据库分类"><a href="#数据库分类" class="headerlink" title="数据库分类"></a>数据库分类</h3><p>数据库产品有很多，以下是一些常见的数据库产品：</p>
+<ul>
+<li>MySQL</li>
+<li>Oracle</li>
+<li>DB2</li>
+<li>SqlServer</li>
+<li>MongoDB</li>
+<li>etc.</li>
+</ul>
+<p>数据库没有排名之分，各有各的应用场景，我们这里学习的是 MongoDB 数据库。</p>
+<h3 id="MongoDB-数据库"><a href="#MongoDB-数据库" class="headerlink" title="MongoDB 数据库"></a>MongoDB 数据库</h3><pre><code>为了更好的学习 MongoDB 数据库，大家可以参考菜鸟教程上的 MongoDB 数据库教程文档，
+链接地址：http://www.runoob.com/mongodb/mongodb-tutorial.html
+
+mongodb数据库官网:https://www.mongodb.com/
+
+下载地址:https://www.mongodb.com/download-center?jmp=nav
+选择好对应的版本下载即可
+</code></pre><h3 id="为什么选择MongoDB"><a href="#为什么选择MongoDB" class="headerlink" title="为什么选择MongoDB?"></a>为什么选择MongoDB?</h3><pre><code>理由:
+
+    1.只要会js/json就会mongodb(学习成本低)
+    2.mongodb对js的兼容性最好
+    3.mongodb存数据就是存JSON
+</code></pre><h3 id="安装与配置-MongoDB-数据库环境"><a href="#安装与配置-MongoDB-数据库环境" class="headerlink" title="安装与配置 MongoDB 数据库环境"></a>安装与配置 MongoDB 数据库环境</h3><pre><code>详情见视频：
+
+怎么验证安装成功:
+    在cmd终端中输入： mongo --version 或是 mongod --version ,能看到版本好,说明安装成功
+
+如果终端中输入 mongo --version 提示找不到命令,一定要看看是不是没有配置mongodb的环境变量,并且配置环境变量之后一定要记得重启cmd
+</code></pre><h3 id="window7安装MongoDB存在的问题"><a href="#window7安装MongoDB存在的问题" class="headerlink" title="window7安装MongoDB存在的问题"></a>window7安装MongoDB存在的问题</h3><pre><code>建议:升级到window10
+
+解决步骤:
+    1.将你的操作系统升级到window7最新版
+    2.安装 vc_redist.x64.exe 
+    3.如果你的电脑是32位的,再安装32位的mongodb软件 mongodb-win32-i386-3.2.11-signed.msi
+</code></pre><h3 id="MongoDB-数据库存储结构"><a href="#MongoDB-数据库存储结构" class="headerlink" title="MongoDB 数据库存储结构"></a>MongoDB 数据库存储结构</h3><p><img src="img/mongodb数据存储结构.png" alt="mongodb数据存储结构"></p>
+<pre><code>和Excel对比一下即可明白:
+
+Excel                       MongoDB
+</code></pre><p>   创建工作簿                    创建数据库<br>   创建一个sheet(工作表单)        创建集合<br>   确立表头,插入数据                插入文档(确立表头)<br>​         </p>
+<pre><code>核心思想:
+    1.分门别类的存储数据
+    2.mongodb是以`集合`的概念来区分不同数据的,比如用户集合,商品集合,订单集合等等,不同的数据要放在不同的集合中去统一管理
+    3.集合里面存储的可以认为是一个数组
+    4.数组中的每一个对象,可以认为就是JSON对象,在mongodb中我们称之为 `文档`
+    5.文档的结构可以随意,但是必须统一,也就是说,同一个集合中,所有的文档一定要遵守相同的数据结构
+
+其他:
+    `集合`的作用就是用来隔离数据,分门别类的存储数据
+</code></pre><h3 id="操作MongoDB的步骤"><a href="#操作MongoDB的步骤" class="headerlink" title="操作MongoDB的步骤"></a>操作MongoDB的步骤</h3><pre><code>1.创建数据库中数据的存储目录
+2.启动MongoDB的服务实例
+3.创建数据库
+4.创建集合
+5.创建文档
+</code></pre><hr>
+<h3 id="MongoDB使用之前必做步骤1–创建数据目录-必须"><a href="#MongoDB使用之前必做步骤1–创建数据目录-必须" class="headerlink" title="MongoDB使用之前必做步骤1–创建数据目录(必须)"></a>MongoDB使用之前必做步骤1–创建数据目录(必须)</h3><pre><code>我们在安装完成MongoDB后需要创建一个存放数据的目录。请注意，数据目录应该放在根目录下（(如： C:\ 或者 D:\ 等 ),数据目录的命名随意,比如我就命名 mongodb_datas
+</code></pre><hr>
+<h4 id="MongoDB使用之前必做步骤2–启动服务器-必须"><a href="#MongoDB使用之前必做步骤2–启动服务器-必须" class="headerlink" title="MongoDB使用之前必做步骤2–启动服务器(必须)"></a>MongoDB使用之前必做步骤2–启动服务器(必须)</h4><pre><code>启动MongoDB服务器的方式一：通过终端指令去启动
+
+    1.首先在终端切换到你的MongoDB的安装目录的bin目录下(当然如果配置了环境变量在哪个目录下都可以了)
+
+    2.在终端执行: mongod.exe --dbpath c:/mongodb_datas ,如果成功启动就表示一切都OK了
+
+    注意点:
+        1.32 位版本使用下面的命令启动数据服务：
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongod --dbpath 数据存储路径 --journal --storageEngine=mmapv1</div></pre></td></tr></table></figure>
+
+
+        2.执行完上面的命令并成功开启 MongoDB 数据服务实例之后，就把该控制台最小化到一边就可以了，
+        千万不要关闭，否则无法连接，如果对数据库的操作结束，可以打开该控制台通过 `Ctrl + C` 关闭。
+
+启动MongoDB服务器的方式二:方式一的延续,把上面的指令做成一个批处理文件.bat
+
+
+启动MongoDB服务器的方式三:将MongoDB服务器作为Windows服务运行
+
+    请注意，你必须有管理权限才能运行下面的命令。执行以下命令将MongoDB服务器作为Windows服务运行：
+
+    例子:
+        mongod.exe --bind_ip 127.0.0.1 --logpath &quot;C:/mongodb_datas/server_log/mongodb.log&quot; --logappend --dbpath &quot;c:/mongodb_datas&quot; --port 27017 --serviceName &quot;MongoDBServer&quot; --serviceDisplayName &quot;MongoDBServerDisplayName&quot; --install
+
+
+    补充:从Windows服务中卸载 MongoDB服务
+        1.先停止要删除的服务(比如MongoDBServer)
+        2.以管理员身份运行cmd,在cmd中输入: sc delete 服务名称(比如MongoDBServer)
+
+    注意点:
+        1.mongodb.log 这个日志文件一定要先创建好,才能执行指令
+        2.必须要以管理员的身份打开cmd窗口,并运行
+</code></pre><hr>
+<h3 id="如何连接到MongoDB服务器并且操作它？"><a href="#如何连接到MongoDB服务器并且操作它？" class="headerlink" title="如何连接到MongoDB服务器并且操作它？"></a>如何连接到MongoDB服务器并且操作它？</h3><p><strong>注意：在进行连接之前请确保你的服务实例是开启状态的（不要关闭刚才开启的数据服务实例）。</strong></p>
+<pre><code>可以使用两种方式来连接到MongoDB服务器并且操作它
+
+连接方式1:使用MongoDB自带的MongoDB后台管理 Shell
+    在终端中输入 mongo 或是 mongo --host 127.0.0.1 --port 27017
+
+    mongo 命令默认去连接本机上的 MongoDB 服务实例：`127.0.0.1:27017`，可以通过下面的命令
+    指定连接的主机名和端口号：
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo --host 127.0.0.1 --port 27017</div></pre></td></tr></table></figure>
+
+
+    如果看到类似于如下的字样说明连接成功：
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">MongoDB shell version v3.4.2</div><div class="line">connecting to: mongodb://127.0.0.1:27017</div><div class="line">MongoDB server version: 3.4.2</div><div class="line">Server has startup warnings:</div><div class="line">2017-01-18T18:49:53.865+0800 I CONTROL  [initandlisten]</div><div class="line">2017-01-18T18:49:53.865+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</div><div class="line">2017-01-18T18:49:53.866+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</div><div class="line">2017-01-18T18:49:53.866+0800 I CONTROL  [initandlisten]</div><div class="line">&gt;</div></pre></td></tr></table></figure>
+
+    如果提示 “无法连接主机”，请检查你的 MongoDB 数据服务实例是否开启。
+
+操作方式1:在终端中使用mongodb的指令进行操作
+
+        常见指令:
+             见下一个知识点
+
+
+连接及操作方式2:使用图形化客户端工具:
+    robomongo(跨平台) : https://robomongo.org/download
+</code></pre><hr>
+<h3 id="基本操作命令"><a href="#基本操作命令" class="headerlink" title="基本操作命令"></a>基本操作命令</h3><pre><code>可以参考:
+    http://www.yiibai.com/mongodb/mongodb_create_collection.html
+
+    http://www.runoob.com/mongodb/mongodb-tutorial.html
+</code></pre><ul>
+<li><code>show dbs</code><ul>
+<li>查看当前服务实例上所有的数据库</li>
+</ul>
+</li>
+<li><code>use 数据库名称</code><ul>
+<li>如果数据库不存在，则创建数据库，否则切换到指定数据库。</li>
+</ul>
+</li>
+<li><code>db.dropDatabase()</code><ul>
+<li>删除数据库,注意,要在切换的数据库中删除</li>
+</ul>
+</li>
+<li><code>db</code><ul>
+<li>查看当前所处的数据库</li>
+</ul>
+</li>
+<li><code>show collections</code><ul>
+<li>查看当前数据库中所有的集合</li>
+</ul>
+</li>
+<li><code>db.createCollection(&quot;集合名称&quot;)</code><ul>
+<li>创建集合</li>
+</ul>
+</li>
+<li><code>db.集合名称.drop()</code><ul>
+<li>删除集合</li>
+</ul>
+</li>
+<li><code>db.集合名称.insert({数据文档})</code><ul>
+<li>插入的每一条文档会自动帮我们生成一个<code>_id</code>字段,它是mongodb自动维护的,不需要我们关心</li>
+</ul>
+</li>
+<li><code>db.集合名称.find()</code><ul>
+<li>查询指定集合中所有的数据</li>
+<li>可以通过 <code>db.集合名称.find().pretty()</code> 美化输出格式</li>
+<li>默认是查询所有，可以通过：<code>db.集合名称.find({查询条件})</code> 按条件查询集合中的数据</li>
+<li>模糊查询的条件 {要查询的字段:{$regex: ‘关键字’}}</li>
+</ul>
+</li>
+<li><code>db.集合名称.update({更新条件}, {要更新的字段})</code><ul>
+<li>更新指定集合数据,注意点,要更新的字段一定要这样写 {$set:{字段的名称:字段的值}},</li>
+</ul>
+</li>
+<li><code>db.集合名称.update({更新条件}, {要更新的字段},{multi:true})</code><ul>
+<li>更新多条文档,{multi:true}默认是false</li>
+</ul>
+</li>
+<li><code>db.集合名称.remove({删除条件})</code><ul>
+<li>删除指定集合中的数据</li>
+</ul>
+</li>
+<li><code>db.集合名称.remove({删除条件},{multi:true})</code><ul>
+<li>删除多条文档,{multi:true}默认是false</li>
+</ul>
+</li>
+<li><code>exit</code> 退出当前操作</li>
+<li><p><code>cls</code> 清屏</p>
+<p>注意点:更新和删除时一般都需要带条件,除非是全部更新与全部删除,不过全部更新与全部删除这样很危险,实际操作过程中很少</p>
+</li>
+</ul>
+<h2 id="使用-Node-操作-MongoDB"><a href="#使用-Node-操作-MongoDB" class="headerlink" title="使用 Node 操作 MongoDB"></a>使用 Node 操作 MongoDB</h2><p>安装 MongoDB 官方提供的驱动包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save mongodb</div></pre></td></tr></table></figure>
+<p>具体操作方式请参考官方文档：<a href="https://www.npmjs.com/package/mongodb" target="_blank" rel="external">https://www.npmjs.com/package/mongodb</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

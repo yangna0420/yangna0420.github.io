@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Na Yang">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="vue_baseUsage"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Hexo"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-light.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">vue_baseUsage</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://yangna0420.github.io.git">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/yangnaupc@126.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Na Yang</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2016-10-11</span>
+            <span class="time">20:54:59</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/vue-directives/">#vue directives</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>​    Vue.js 是一套构建用户界面的<strong>渐进式框架</strong>。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与<a href="https://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank" rel="external">单文件组件</a>和 <a href="https://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank" rel="external">Vue 生态系统支持的库</a>结合使用时，Vue 也完全能够为复杂的单页应用程序提供驱动。</p>
+<a id="more"></a>
+<h1 id="为什么要学Vue"><a href="#为什么要学Vue" class="headerlink" title="为什么要学Vue?"></a>为什么要学Vue?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.站在公司的角度思考</div><div class="line">	节约成本,节约时间</div><div class="line">2.站在开发者角度思考</div><div class="line">	减少bug出现,避免在一些环境配置上面浪费太多事件</div><div class="line">	可以让开发者更加关注项目的业务逻辑</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Vuejs"><a href="#Vuejs" class="headerlink" title="Vuejs"></a>Vuejs</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">基本概念:</div><div class="line">	是一套前端的MVVM框架</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">介绍</div><div class="line">	官网:https://cn.vuejs.org/</div><div class="line">	</div><div class="line">学习资源:</div><div class="line">	http://aicoder.com/vue/preview/all.html#640203</div><div class="line">	</div><div class="line">	https://github.com/malun666/vue-stepbystep</div><div class="line">	</div><div class="line">	官方文档:https://cn.vuejs.org/v2/guide/</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">优势:</div><div class="line">	体积小,大小100k,压缩后70k,适合移动站点的开发</div><div class="line">	有中文文档,甚至它的一些拓展包也是中文的文档,学习入门快</div><div class="line">	</div><div class="line">目前Vue的使用情况</div><div class="line">	</div><div class="line">	Vue项目：饿了么招聘：https://jobs-mobile.ele.me/#!/</div><div class="line">	</div><div class="line">	知乎上的一个转帖：https://www.zhihu.com/question/38213423</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="什么是MVVM"><a href="#什么是MVVM" class="headerlink" title="什么是MVVM"></a>什么是MVVM</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">M : Model 模型/数据</div><div class="line">V : View 视图</div><div class="line">VM : View-Model 视图模型</div><div class="line"></div><div class="line">MVVM要解决的问题:</div><div class="line">	视图和模型分离的问题</div><div class="line">	</div><div class="line">Vue中是怎么体现MVVM思想的呢?</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Vue初体验来说明Vue是如何实现MVVM思想的"><a href="#Vue初体验来说明Vue是如何实现MVVM思想的" class="headerlink" title="Vue初体验来说明Vue是如何实现MVVM思想的"></a>Vue初体验来说明Vue是如何实现MVVM思想的</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">代码:</div><div class="line">	见04-源代码中的 01-vue初体验</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="Vue的指令"><a href="#Vue的指令" class="headerlink" title="Vue的指令"></a>Vue的指令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">作用:</div><div class="line">	操作dom,View-Model就是利用这些指令,将数据填充到View</div><div class="line">	上面去展示的</div><div class="line">	</div><div class="line">注意点:</div><div class="line">	我们在Vue中,大部分情况下,我们不要再直接操作dom了,应该操作Vue中的数据,</div><div class="line">	当数据改变了,Vue会使用它内部的指令去操作dom,进行渲染</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="vue常见的v-指令"><a href="#vue常见的v-指令" class="headerlink" title="vue常见的v-指令"></a>vue常见的v-指令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">插值表达式 &#123;&#123;&#125;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">v-text:</div><div class="line">	这个是插值表达式的另外一种写法</div><div class="line">	注意:不能放到文本框中使用,通常是放到 div span p 标签中使用</div><div class="line">	</div><div class="line">v-html:</div><div class="line">	这个能保证字符串中的html标签也能被浏览器正常解析</div><div class="line">	</div><div class="line">v-on:</div><div class="line">	给html元素注册一些js事件:</div><div class="line">		click事件,change事件,keyup,keydown,xxx</div><div class="line">		</div><div class="line">	写法:</div><div class="line">		在html元素中 &lt;button v-on:click=&quot;click&quot;&gt;显示或是隐藏元素&lt;/button&gt;</div><div class="line">		</div><div class="line">		在&lt;script&gt;标签中,要单独写一个 methods的代码块</div><div class="line">		</div><div class="line">	注意:</div><div class="line">		可以利用@来简化html中v-on的写法</div><div class="line">	</div><div class="line">v-bind:</div><div class="line">	作用:是可以在html元素上拓展任何属性,例如</div><div class="line">	&lt;span v-bind:title=&apos;可以是data中的一个变量&apos;&gt;&lt;/span&gt;</div><div class="line">	</div><div class="line">	利用:可以用来简写,比如&lt;span :title=&apos;可以是data中的一个变量&apos;&gt;&lt;/span&gt;</div><div class="line">	应用场景:一般动态的值需要绑定,比如img的src属性,或是需要动态变化的样式</div><div class="line">	</div><div class="line">	注意点:</div><div class="line">		v-bind的特殊写法,原因是在绑定某些特殊属性的时候,这些属性由固定的字符串加上一个变量来组成,那么这个时候,如果使用 :href=&apos;getnews&apos;+id,那么id是找不到的,应该这样写 v-bind=&quot;&#123;href:&apos;getnews/&apos;+id&#125;&quot;</div><div class="line">	</div><div class="line">v-model:</div><div class="line">	mvvm设计模式</div><div class="line">	双向数据绑定</div><div class="line">	使用场景:一般用在文本框中用来进行视图和模型的双向绑定</div><div class="line">	</div><div class="line">v-if:</div><div class="line">	根据一个表达式的值判断,如果值为真,就解析这个html元素,否则不解析这个html元素,在原有的位置使用&lt;!-- --&gt;占位,注意:它不会解析</div><div class="line">	</div><div class="line">v-show:</div><div class="line">	根据一个表达式的值判断,如果值为真,就显示这个html元素,否则隐藏这个html元素,注意:它会解析,注意与v-if的区别</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">作用:</div><div class="line">	遍历数组或者对象中的成员按照一定的模版内容重复生成html内容</div><div class="line"></div><div class="line">遍历数组</div><div class="line">	如:</div><div class="line">		var list = [1,2,3];</div><div class="line">		</div><div class="line">	1.不需要索引</div><div class="line">		v-for=&quot;item in list&quot; :key=&quot;item.一个唯一标识&quot;;</div><div class="line">	</div><div class="line">	2.需要索引</div><div class="line">		v-for=&quot;(item,index) in list&quot; :key=&quot;index&quot;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">遍历对象中的属性</div><div class="line">	var user=&#123;&quot;name&quot;:&quot;duanzihuang&quot;,&quot;age&quot;:20&#125;;</div><div class="line">	v-for=&quot;(item,key,index) in user :key=&quot;index&quot; &quot;;</div><div class="line"></div><div class="line">直接遍历整数</div><div class="line">	v-for=&quot;item in 3&quot; ===&gt; 1,2,3</div><div class="line">	</div><div class="line">注意点:</div><div class="line">	v-for 标签一定要加在被遍历的元素上,不要写错地方啦</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vue1.x和2.x的区别:</div><div class="line">	vue1.x提供了一些全局的过滤器,2.x废弃了,需要程序员自己写</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">组件私有过滤器:</div><div class="line">	定义:</div><div class="line">		在组件的&lt;script&gt;中添加一个属性 filters:&#123;</div><div class="line">			tolowercase(input)&#123;</div><div class="line">				return input.toLowerCase();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	使用:</div><div class="line">		在组件的&lt;template&gt;标签中,使用的地方使用即可,例如</div><div class="line">			&#123;&#123;msg | tolowercase&#125;&#125;</div><div class="line">			</div><div class="line">	不足之处:</div><div class="line">		只能在自己定义的Vue对象中使用,在其它Vue对象中就使用不了了</div><div class="line"></div><div class="line">全局的过滤器:</div><div class="line">	定义:</div><div class="line">		在main.js中定义即可</div></pre></td></tr></table></figure>
+<pre><code>    Vue.filter(&apos;toUpperCase&apos;,function(input){
+        return input.toUpperCase();
+    });
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">			</div><div class="line">	使用:</div><div class="line">		在组件的&lt;template&gt;标签中,使用的地方使用即可,例如</div><div class="line">			&#123;&#123;msg | tolowercase&#125;&#125;</div><div class="line">			</div><div class="line">	注意点:</div><div class="line">		全局过滤器的设置,一定要在创建Vue对象之前,否则不起作用</div><div class="line"></div><div class="line">注意点:</div><div class="line">	如果一个vue组件中,定义的私有过滤器的名称和全局过滤器的名称相同的化,私有过滤器的调用优先级高于全局过滤器</div></pre></td></tr></table></figure>
+</code></pre><hr>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">作用:</div><div class="line">	用来显示页面内容的</div><div class="line"></div><div class="line">写法:</div><div class="line">	四种,详见代码</div><div class="line"></div><div class="line">注意点:</div><div class="line">	在vue2.0中,组件必须要有一个根元素</div></pre></td></tr></table></figure>
+<h1 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">作用:路由跳转</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">网址:</div><div class="line">	https://router.vuejs.org/zh-cn/</div><div class="line">	https://github.com/vuejs/vue-router</div><div class="line"></div><div class="line">使用:</div><div class="line">	看文档</div><div class="line">	见代码</div><div class="line"></div><div class="line">注意点:</div><div class="line">	1.x和2.x是不一样的</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="vue-resource"><a href="#vue-resource" class="headerlink" title="vue-resource"></a>vue-resource</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">作用:在Vue中发送网络请求的 GET/POST/JSONP</div></pre></td></tr></table></figure>
+<p>```<br>网址:<br>    <a href="https://github.com/pagekit/vue-resource" target="_blank" rel="external">https://github.com/pagekit/vue-resource</a></p>
+<p>文档地址:<br>    <a href="https://github.com/pagekit/vue-resource/blob/master/docs/http.md" target="_blank" rel="external">https://github.com/pagekit/vue-resource/blob/master/docs/http.md</a></p>
+<p>注意:<br>    它是一个基于Vue的第三方网络框架</p>
+<pre><code>jsonp的Ajax请求需要后台API接口的支持
+</code></pre><hr>
+<h2 id="Vue中route与router的区别"><a href="#Vue中route与router的区别" class="headerlink" title="Vue中route与router的区别"></a>Vue中route与router的区别</h2><p>相同点:</p>
+<pre><code>都是隶属于路由的
+</code></pre><p>不同点:<br>    作用不一样<br>        router:用来做编程式导航 (前进后退等功能)</p>
+<pre><code>route: 1.路由跳转传值
+       2.到时候可以根据当前route.path来判断当前的路由路径是什么
+</code></pre><hr>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
